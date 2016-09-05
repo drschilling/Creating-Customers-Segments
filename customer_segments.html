@@ -207,7 +207,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -260,7 +260,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -469,6 +469,150 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Displaying how much of the sample is above or below the average for every product.</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4117</td>
+      <td>40401</td>
+      <td>84829</td>
+      <td>-2046</td>
+      <td>37946</td>
+      <td>1419</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8398</td>
+      <td>-4659</td>
+      <td>-7948</td>
+      <td>1335</td>
+      <td>-2878</td>
+      <td>-550</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>24847</td>
+      <td>38154</td>
+      <td>12219</td>
+      <td>33462</td>
+      <td>-2642</td>
+      <td>46418</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Displaying how much of the sample is above or below the median for every product.</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">median</span><span class="p">()))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>7613</td>
+      <td>42570</td>
+      <td>88024</td>
+      <td>-500</td>
+      <td>40011</td>
+      <td>1978</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11894</td>
+      <td>-2490</td>
+      <td>-4753</td>
+      <td>2881</td>
+      <td>-813</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28343</td>
+      <td>40323</td>
+      <td>15414</td>
+      <td>35008</td>
+      <td>-577</td>
+      <td>46977</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -488,11 +632,11 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> From an exploratory analysis of the data provided above, three different types of establishments profiles were chosen:</p>
 <ul>
-<li><p>The first establishment, index <strong>[85]</strong> stands out for the large purchase of detergents paper, which reveals that the establishment must have a structure that offers a large number of bathrooms or washrooms to justify the amount. I consider the customer with index [85] with a profile similar to a shopping mall or a hotel that has a large structure for personal hygiene and cleanliness.</p>
+<li><p>The first establishment, index <strong>[85]</strong> stands out for the large purchase of detergents paper really above the average (about 1317.11%) and the median (about 4903.31%) consumption values for that product, which reveals that the establishment must have a structure that offers a large number of bathrooms or washrooms to justify the amount. I consider the customer with index [85] with a profile similar to a shopping mall or a hotel that has a large structure for personal hygiene and cleanliness.</p>
 </li>
-<li><p>The second customer, index <strong>[75]</strong>, stands out for the large purchase of fresh products. A low purchase of detergent papers could reveal a small structure of services, and low buy in groceries in relation to fresh products reveals the client's predilection to sell such products. I would consider the customer of index [75] as a street fair stall selling fruits and vegetables.</p>
+<li><p>The second customer, index <strong>[75]</strong>, stands out for the large purchase of fresh products above the average (about 69.98%) and the median (about 0.88%). A low purchase of detergent papers could reveal (99.9% below the average) a small structure of services, and low buy in groceries in relation to fresh products reveals the client's predilection to sell such products. I would consider the customer of index [75] as a street fair stall selling fruits and vegetables.</p>
 </li>
-<li><p>The third client, index <strong>[183]</strong>, has large purchases of fresh, milk, frozen and grocery products. But it stands out for its high purchase of delicatessen products which indicates that the estabelishment could be a delicatessen market.</p>
+<li><p>The third client, index <strong>[183]</strong>, has large purchases of fresh (207.06% above the average), milk (658.28% above the average), frozen (1089.65% above the average) and grocery (153.68% above the average) products if we consider the average values for each one of those products. But it stands out for its high purchase (3045.87% above the average value) of delicatessen products which indicates that the estabelishment could be a delicatessen market.</p>
 </li>
 </ul>
 
@@ -521,7 +665,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -599,7 +743,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -2379,7 +2523,7 @@ o+AAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The pair of features <strong>Detergents_Paper</strong> X <strong>Grocery</strong> exhibit a linear correlation as we can see on the scatter matrix. According to the scatter plot the two features have their data distributed in a straight line. Behavior that we can also notice on the relation of the features Grocery x Milk. This correlation between the features confirms my suspicion about the relevance of the feature "Detergents_paper" for the model, i.e. , has a positive degree of relevance to characterize the costumers'buying habits.</p>
+<p><strong>Answer:</strong> The pair of features <strong>Detergents_Paper</strong> X <strong>Grocery</strong> exhibit a linear correlation as we can see on the scatter matrix. According to the scatter plot the two features have their data distributed in a straight line. Behavior that we can also notice on the relation of the features Grocery x Milk. This correlation between the features confirms my suspicion about the relevance of the feature "Detergents_paper" for the model, i.e., has a positive degree of relevance to characterize the costumers'buying habits. The model features do not have a normal distribution, however they all have a distribution profile in common, which would be a <strong>positively skewed</strong> distribution where the median is closer to the first quartile than the third quartile and where the most data lies above the average.</p>
 
 </div>
 </div>
@@ -8800,7 +8944,7 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The two clusters that we have in our model reveal two different consumer profiles that can be tested via A/B test. To better assess the impact of the changes on the delivery service, we would have to split the segment 0 and segment 1 into subgroups measuring its consequences within a delta time. Hypothetically we can raise a scenario where the segment 0 is A/B tested. For this we divide the segment 0 (can also be implemented in segment 1) into two sub-groups of establishments where only one of them would suffer the implementation of the new delivery period of three days a week, and the another would remain as a control with five days a week as usual. After a certain period of time, we could, through the consumption levels of the establishments, come to some conclusions, such as: whether the new frequency of deliveries is sufficient or not for a buyer. Where a sensible increase in overall consumption of all products may indicate the need for the estabelishment to mantain a storage because of the decreasing delivery frequency; or if it negatively affects the consumption profile of certain products, like groups of costumers who have greater buying fresh produce that can be negatively impacted, precisely because of the demand for fresh products with a higher delivery frequency. We can not say that the change in frequency will affect equally all customers because of the different consumption profiles that are part of the two segments. There will therefore consumers that will be affected, and possibly groups of buyers who will not undergo any change.</p>
+<p><strong>Answer:</strong> The two clusters that we have in our model reveal two different consumer profiles that can be tested via A/B test. To better assess the impact of the changes on the delivery service, we would have to split the segment 0 and segment 1 into sub-groups measuring its consequences within a delta time. Hypothetically we can raise a scenario where the segment 0 is A/B tested. For this we divide the segment 0 (can also be implemented in segment 1) into two sub-groups of establishments where only one of them would suffer the implementation of the new delivery period of three days a week, and the another would remain as a control with five days a week as usual. After a certain period of time, we could, through the consumption levels of the establishments, come to some conclusions, such as: whether the new frequency of deliveries is sufficient or not for a buyer. Where a sensible increase in overall consumption of all products may indicate the need for the estabelishment to mantain a storage because of the decreasing delivery frequency; or if it negatively affects the consumption profile of certain products, like groups of costumers who have greater buying fresh produce that can be negatively impacted, precisely because of the demand for fresh products with a higher delivery frequency. We can not say that the change in frequency will affect equally all customers because of the different consumption profiles that are part of the two segments. There will therefore consumers that will be affected, and possibly groups of buyers who will not undergo any change.</p>
 
 </div>
 </div>
